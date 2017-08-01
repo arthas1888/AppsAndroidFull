@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FirstApplication</string>
+    <string name="action_settings">Settings</string>
+    <string name="txt_height">Digite la estatura en cm</string>
+    <string name="txt_weigth">Digite el peso en kg</string>
+    <string name="calcular">Calcular</string>
+    <string name="resultado">Resultado</string>
+</resources>
