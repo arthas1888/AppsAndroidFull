@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity
         LoaderManager.LoaderCallbacks<Cursor>,
         SearchView.OnQueryTextListener {
 
-    private static final String TABLE_NAME = "Place";
-    private static final String AUTHORITY = "com.example.a68.httpapplication.MyContentProvider";
+    public static final String TABLE_NAME = "Place";
+    public static final String AUTHORITY = "com.example.a68.httpapplication.MyContentProvider";
     private static final Uri GET_ALL_URI = Uri.parse("content://" + AUTHORITY + "/" + TABLE_NAME);
     private MyCursorRecyclerViewAdapter adapter;
 
@@ -124,6 +124,9 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onItemInteraction(int id) {
         Log.d("MAIN", "id: " + id);
+        Intent intent = new Intent(this, DetailsActivity.class);
+        intent.putExtra("id", id);
+        startActivity(intent);
     }
 
     /**
